@@ -11,7 +11,7 @@ class Agenda:
 
     @staticmethod
     def remover(key: str) -> Pessoa:
-        p: Pessoa = Agenda.contatos[key]
+        p = Agenda.contatos[key]
         Agenda.contatos.pop(key)
         return p
 
