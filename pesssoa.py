@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
 class Pessoa(ABC):
     nome: str
@@ -9,3 +9,10 @@ class Pessoa(ABC):
         self.nome = nome
         self.endereco = endereco
         self.email = email
+
+    @abstractmethod
+    def getKey(self) -> str:
+        pass
+    
+    def __str__(self) -> str:
+        return 'Nome: {}\nEndereço: {}\nEmail: {}\n'.format(self.nome, self.endereco, self.email)

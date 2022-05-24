@@ -10,3 +10,9 @@ class PessoaJuridica(Pessoa):
         self.cnpj = cnpj
         self.inscricaoEstadual = inscricaoEstadual
         self.razaoSocial = razaoSocial
+
+    def getKey(self) -> str:
+        return self.cnpj
+
+    def __str__(self) -> str:
+        return super().__str__() + 'CNPJ: {}\nInscrição Estadual: {}\nRazão Social: {}\n'.format(self.cnpj, self.inscricaoEstadual, self.razaoSocial)
