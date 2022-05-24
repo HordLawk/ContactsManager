@@ -5,7 +5,7 @@ from pesssoa import Pessoa
 from datetime import datetime
 
 cmd = -1
-while cmd != 0:
+while cmd:
     cmd = int(input('Menu:\n0 - Sair\n1 - Adicionar contato\n2 - Remover contato\n3 - Pesquisar por nome\n4 - Pesquisar por CPF/CNPJ\n5 - Listar contatos\n> '))
     if cmd == 1:
         tipo = int(input('\nTipo do contato:\n1 - Pessoa física\n2 - Pessoa jurídica\n> '))
