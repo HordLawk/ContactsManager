@@ -34,8 +34,8 @@ class Agenda:
         contatosOrdenados = list(Agenda.contatos.values())
         for i, e in enumerate(contatosOrdenados):
             j = i - 1
-            while j >=0 and ((isinstance(e, PessoaJuridica) < isinstance(contatosOrdenados[j], PessoaJuridica)) or (e.getKey() < contatosOrdenados[j].getKey())):
-                    contatosOrdenados[j + 1] = contatosOrdenados[j]
-                    j -= 1
+            while (j >= 0) and ((isinstance(e, PessoaJuridica) < isinstance(contatosOrdenados[j], PessoaJuridica)) or (e.getKey() < contatosOrdenados[j].getKey())):
+                contatosOrdenados[j + 1] = contatosOrdenados[j]
+                j -= 1
             contatosOrdenados[j + 1] = e
         return contatosOrdenados
