@@ -15,4 +15,4 @@ class PessoaJuridica(Pessoa):
         return self.cnpj
 
     def __str__(self) -> str:
-        return super().__str__() + 'CNPJ: {}\nInscrição Estadual: {}\nRazão Social: {}\n'.format(self.cnpj, self.inscricaoEstadual, self.razaoSocial)
+        return super().__str__() + f'CNPJ: {self.cnpj}\nInscrição Estadual: {self.inscricaoEstadual}\nRazão Social: {self.razaoSocial}\n'

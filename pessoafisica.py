@@ -3,11 +3,11 @@ from datetime import datetime
 from pesssoa import Pessoa
 
 class EstadosCivis:
-    Valor: Enum = Enum('EstadosCivis', ['Solteiro(a)', 'Casado(a)', 'Separado(a)', 'Divorciado(a)', 'Viúvo(a)'])
+    Valor = Enum('EstadosCivis', ['Solteiro(a)', 'Casado(a)', 'Separado(a)', 'Divorciado(a)', 'Viúvo(a)'])
     
     @staticmethod
     def listar() -> str:
-        return '\n'.join(['{} - {}'.format(x.value, x.name) for x in EstadosCivis.Valor])
+        return '\n'.join([f'{x.value} - {x.name}' for x in EstadosCivis.Valor])
 
     @staticmethod
     def values() -> list[int]:
@@ -28,4 +28,4 @@ class PessoaFisica(Pessoa):
         return self.cpf
 
     def __str__(self) -> str:
-        return super().__str__() + 'CPF: {}\nData de Nascimento: {}\nEstado Civil: {}\n'.format(self.cpf, self.dataDeNascimento.date(), self.estadoCivil.name)
+        return super().__str__() + f'CPF: {self.cpf}\nData de Nascimento: {self.dataDeNascimento.date()}\nEstado Civil: {self.estadoCivil.name}\n'

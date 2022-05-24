@@ -15,4 +15,4 @@ class Pessoa(ABC):
         pass
     
     def __str__(self) -> str:
-        return 'Nome: {}\nEndereço: {}\nEmail: {}\n'.format(self.nome, self.endereco, self.email)
+        return f'Nome: {self.nome}\nEndereço: {self.endereco}\nEmail: {self.email}\n'
